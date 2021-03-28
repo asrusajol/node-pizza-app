@@ -18,6 +18,6 @@ app.set('view engine', 'ejs')
 
 app.listen(PORT, ()=> {
     console.log(`Listen on port ${PORT}`)
-    console.log('Server run Success !!hi!')
+    console.log('Server run Success !!!')
 })
 
