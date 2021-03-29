@@ -1,0 +1,6 @@
+
+> pizza-app@1.0.0 start /home/rajib/node-project/node-pizza-app
+> node server.js
+
+Listen on port 8000
+Server run Success !!!
