@@ -9,9 +9,13 @@ const path = require('path')
 app.use(express.static('public'))
 
 
-const PORT = process.env.PORT || 8000
+//Routes
 app.get('/',(req,res)=>{
     res.render('home')
+})
+
+app.get('/cart',(req,res)=>{
+    res.render('customers/cart')
 })
 
 //set Template Engine
@@ -19,6 +23,8 @@ app.use(expressLayout)
 app.set('views', path.join(__dirname,'/resources/views'))
 app.set('view engine', 'ejs')
 
+
+const PORT = process.env.PORT || 8000
 app.listen(PORT, ()=> {
     console.log(`Listen on port ${PORT}`)
     console.log('Server run Success !!!')
