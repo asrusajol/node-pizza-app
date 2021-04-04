@@ -8,6 +8,10 @@ const path = require('path')
 //Asseet
 app.use(express.static('public'))
 
+//set Template Engine
+app.use(expressLayout)
+app.set('views', path.join(__dirname,'/resources/views'))
+app.set('view engine', 'ejs')
 
 //Routes
 app.get('/',(req,res)=>{
@@ -17,11 +21,6 @@ app.get('/',(req,res)=>{
 app.get('/cart',(req,res)=>{
     res.render('customers/cart')
 })
-
-//set Template Engine
-app.use(expressLayout)
-app.set('views', path.join(__dirname,'/resources/views'))
-app.set('view engine', 'ejs')
 
 
 const PORT = process.env.PORT || 8000

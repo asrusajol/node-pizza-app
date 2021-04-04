@@ -42,7 +42,15 @@ section.hero {
 .btn-primary {
   background: $primary;
   transition: $smooth;
+  color: $pure;
   &:hover {
     background: $primary-hover;
+  }
+}
+
+section.cart {
+  background: $secondary;
+  .amount {
+    color: $primary;
   }
 }
