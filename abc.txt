@@ -1,3 +1,0 @@
-this is from abc.txt file
-new line added on abc.txt
-server run test
