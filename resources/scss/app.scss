@@ -54,3 +54,21 @@ section.cart {
     color: $primary;
   }
 }
+
+section.login {
+  a {
+    color: $primary;
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+}
+
+section.register {
+  a {
+    color: $primary;
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+}

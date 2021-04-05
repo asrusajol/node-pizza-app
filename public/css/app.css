@@ -53,3 +53,17 @@ section.cart {
 section.cart .amount {
   color: #fe5f1e;
 }
+
+section.login a {
+  color: #fe5f1e;
+}
+section.login a:hover {
+  color: #b23301;
+}
+
+section.register a {
+  color: #fe5f1e;
+}
+section.register a:hover {
+  color: #b23301;
+}
