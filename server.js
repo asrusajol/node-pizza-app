@@ -8,7 +8,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const session=require('express-session');
 const flash = require('express-flash');
-const MongoDbStore = require('connect-mongo')
+const MongoDbStore = require('connect-mongo');
+const { json } = require('express');
 
 //Database Connection
 const url='mongodb://localhost/pizza';
@@ -25,19 +26,18 @@ connection.once('open',()=>{
     console.log('Connection Failed')
 })
 
-//Session Store
-
-//session configuration
+//session configuration  & Session Store
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false,
     store:MongoDbStore.create(connection), //here "connections" from DB 
     saveUninitialized: false,
-    cookie: {maxAge:1000*60*25} //25 min
+    cookie: {maxAge:1000*60*60*24} //25 min
 
 }))
 
 app.use(flash())
+app.use(json())
 
 //Asseet
 app.use(express.static('public'))

@@ -1848,9 +1848,7 @@ __webpack_require__.r(__webpack_exports__);
 var addToCart = document.querySelectorAll('.add-to-cart');
 
 function updateCart(pizza) {
-  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {
-    console.log(res);
-  });
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {});
 }
 
 addToCart.forEach(function (btn) {
