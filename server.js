@@ -38,6 +38,11 @@ app.use(session({
 
 app.use(flash())
 app.use(json())
+//global middleware
+app.use((req,res,next)=>{
+    res.locals.session = req.session
+    next()
+});
 
 //Asseet
 app.use(express.static('public'))

@@ -29,7 +29,8 @@
     "express-ejs-layouts": "^2.5.0",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.1",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "noty": "*"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
